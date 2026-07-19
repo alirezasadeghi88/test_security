@@ -1,0 +1,23 @@
+server:
+  port: 5050
+
+spring:
+  application:
+    name: security
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/security
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+jwt:
+  secret: 123456789123456789123456789123456789123456789123456789
+  issuer: paint-store
+  access-token-expiration: 900000
+  refresh-token-expiration: 604800000
